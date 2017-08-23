@@ -19,13 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(configureError)")
-
-        GIDSignIn.sharedInstance().delegate = self
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
 
         return true
     }
@@ -38,18 +36,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication =  options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+        let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
 
-        return handled;
+        let googleHandler = GIDSignIn.sharedInstance().handle(
+                url,
+                sourceApplication: sourceApplication,
+                annotation: annotation )
+
+        let facebookHandler = FBSDKApplicationDelegate.sharedInstance().application (
+                app,
+                open: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation )
+
+        return googleHandler || facebookHandler
     }
-
-//    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any])
-//                    -> Bool {
-//        return GIDSignIn.sharedInstance().handle(url,
-//                sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-//                annotation: [:])
-//    }
 
 
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
