@@ -50,7 +50,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             infoTextField.text = "facebook" + fbAccessToken.authenticationToken
         } else {
             let loginManager = LoginManager()
-            loginManager.loginBehavior = LoginBehavior.web
             loginManager.logIn([.publicProfile, .email, .userFriends], viewController: self) { loginResult in
                 switch loginResult {
 
