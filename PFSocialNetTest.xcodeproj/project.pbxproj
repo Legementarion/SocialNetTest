@@ -18,6 +18,7 @@
 		842F13461F4C76D900084708 /* PFSocialNetTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F13451F4C76D900084708 /* PFSocialNetTestTests.swift */; };
 		842F13511F4C76DA00084708 /* PFSocialNetTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F13501F4C76DA00084708 /* PFSocialNetTestUITests.swift */; };
 		842F13611F4C832100084708 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842F13601F4C832100084708 /* GoogleService-Info.plist */; };
+		A37407BE1F500D8C00D9E73F /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		842F13601F4C832100084708 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84D591FF1F4D77B5004463B2 /* PFSocialNetTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFSocialNetTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		9FE39F9E5175B789868E48E6 /* Pods_PFSocialNetTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PFSocialNetTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedinViewController.swift; path = Controllers/LinkedinViewController.swift; sourceTree = "<group>"; };
 		BCBDF0DF6BB09F8B23917F07 /* Pods-PFSocialNetTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFSocialNetTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PFSocialNetTestUITests/Pods-PFSocialNetTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CF4F27D87A9C041623C457CF /* Pods_PFSocialNetTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PFSocialNetTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42E42F5D194B89E10C223C3 /* Pods-PFSocialNetTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFSocialNetTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PFSocialNetTestUITests/Pods-PFSocialNetTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				842F13321F4C76D900084708 /* ViewController.swift */,
+				A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			files = (
 				842F13331F4C76D900084708 /* ViewController.swift in Sources */,
 				842F13311F4C76D900084708 /* AppDelegate.swift in Sources */,
+				A37407BE1F500D8C00D9E73F /* LinkedinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

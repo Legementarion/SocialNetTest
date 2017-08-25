@@ -57,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih3-zy-MxB"/>
+                                    <segue destination="OpC-ot-NwQ" kind="presentation" id="uDQ-j0-5vg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-zv-yym">
@@ -84,6 +85,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29.600000000000001" y="42.728635682158924"/>
+        </scene>
+        <!--Linkedin View Controller-->
+        <scene sceneID="4Nv-r6-QH5">
+            <objects>
+                <viewController id="OpC-ot-NwQ" customClass="LinkedinViewController" customModule="PFSocialNetTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnb-73-hmt"/>
+                        <viewControllerLayoutGuide type="bottom" id="sNw-J9-i8Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XPP-w4-COZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yia-td-sXw">
+                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BbL-Ab-qNu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Close" id="lT6-HW-TBL" userLabel="Close">
+                                        <connections>
+                                            <action selector="dismiss:" destination="OpC-ot-NwQ" id="XA2-XW-f8A"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-a9-4rt">
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XHr-a9-4rt" secondAttribute="trailing" id="3hc-hU-3Ub"/>
+                            <constraint firstItem="sNw-J9-i8Z" firstAttribute="top" secondItem="XHr-a9-4rt" secondAttribute="bottom" id="84E-lN-c6p"/>
+                            <constraint firstItem="yia-td-sXw" firstAttribute="leading" secondItem="XPP-w4-COZ" secondAttribute="leading" id="BzV-S9-Ueq"/>
+                            <constraint firstItem="XHr-a9-4rt" firstAttribute="leading" secondItem="XPP-w4-COZ" secondAttribute="leading" id="FA7-8W-RVX"/>
+                            <constraint firstItem="XHr-a9-4rt" firstAttribute="top" secondItem="yia-td-sXw" secondAttribute="bottom" id="MTQ-ze-FFi"/>
+                            <constraint firstItem="yia-td-sXw" firstAttribute="top" secondItem="XPP-w4-COZ" secondAttribute="top" constant="10" id="On7-2E-sfz"/>
+                            <constraint firstAttribute="trailing" secondItem="yia-td-sXw" secondAttribute="trailing" id="gcz-P0-TWM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="XHr-a9-4rt" id="pDq-aF-dZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVS-Zh-sy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.39999999999998" y="42.728635682158924"/>
         </scene>
     </scenes>
 </document>
