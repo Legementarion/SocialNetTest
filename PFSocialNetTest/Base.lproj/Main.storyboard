@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,58 +22,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-NI-3wq">
-                                <rect key="frame" x="88" y="427" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-NI-3wq">
+                                <rect key="frame" x="67" y="240" width="242" height="50"/>
                                 <color key="backgroundColor" red="0.35610858830173664" green="0.30607632884650454" blue="0.86261334196891193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="roc-AH-tND"/>
+                                </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="FaceBook">
+                                        <fragment content="Facebook">
                                             <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <color key="NSColor" red="1" green="0.99998795986175537" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="21" name=".AppleSystemUIFont"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInFaceBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvC-3S-6Jj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zm-77-fbZ">
-                                <rect key="frame" x="51" y="131" width="273" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zm-77-fbZ">
+                                <rect key="frame" x="36" y="110" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ftZ-fP-jrx"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-as-hr3">
-                                <rect key="frame" x="88" y="556" width="198" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.31886133568062647" green="0.83276600739457485" blue="0.86261334196891193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="LinkedIb">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.43810332239999999" green="1" blue="0.98849768760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signInLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih3-zy-MxB"/>
-                                    <segue destination="OpC-ot-NwQ" kind="presentation" id="uDQ-j0-5vg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-zv-yym">
-                                <rect key="frame" x="88" y="495" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fu-zv-yym">
+                                <rect key="frame" x="67" y="333" width="242" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.62922758047785032" blue="0.34549002756784042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UZ6-1P-OPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Google">
-                                    <color key="titleColor" red="0.3850414080159964" green="0.42537304796274589" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Fk-NO-6qh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-as-hr3">
+                                <rect key="frame" x="67" y="433" width="242" height="50"/>
+                                <color key="backgroundColor" red="0.31886133568062647" green="0.83276600739457485" blue="0.86261334196891193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ubR-ka-Kg0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="LinkedIb">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.43810332239999999" green="1" blue="0.98849768760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih3-zy-MxB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9376619170984456" green="0.9376619170984456" blue="0.9376619170984456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wyY-as-hr3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="Fjm-o9-ClF"/>
+                            <constraint firstItem="5fu-zv-yym" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="KRV-qS-8jk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wyY-as-hr3" secondAttribute="trailing" constant="50" id="NWn-Yu-N0i"/>
+                            <constraint firstItem="7Zm-77-fbZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="OKi-XT-m9r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rhq-NI-3wq" secondAttribute="trailing" constant="50" id="Rfd-jc-uTU"/>
+                            <constraint firstItem="Rhq-NI-3wq" firstAttribute="top" secondItem="7Zm-77-fbZ" secondAttribute="bottom" constant="100" id="ZVD-1F-s5h"/>
+                            <constraint firstItem="5fu-zv-yym" firstAttribute="top" secondItem="Rhq-NI-3wq" secondAttribute="bottom" constant="43" id="bVd-cx-w38"/>
+                            <constraint firstItem="7Zm-77-fbZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="bnQ-3A-eBN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5fu-zv-yym" secondAttribute="trailing" constant="50" id="mHF-Lo-ICE"/>
+                            <constraint firstItem="wyY-as-hr3" firstAttribute="top" secondItem="5fu-zv-yym" secondAttribute="bottom" constant="50" id="r1j-We-s82"/>
+                            <constraint firstItem="Rhq-NI-3wq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="rI6-7G-Gdt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Zm-77-fbZ" secondAttribute="trailing" constant="20" id="sBH-e6-mro"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="InfoTextField" destination="7Zm-77-fbZ" id="goL-bf-M4x"/>
@@ -84,56 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="42.728635682158924"/>
-        </scene>
-        <!--Linkedin View Controller-->
-        <scene sceneID="4Nv-r6-QH5">
-            <objects>
-                <viewController id="OpC-ot-NwQ" customClass="LinkedinViewController" customModule="PFSocialNetTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gnb-73-hmt"/>
-                        <viewControllerLayoutGuide type="bottom" id="sNw-J9-i8Z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XPP-w4-COZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yia-td-sXw">
-                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="BbL-Ab-qNu"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Close" id="lT6-HW-TBL" userLabel="Close">
-                                        <connections>
-                                            <action selector="dismiss:" destination="OpC-ot-NwQ" id="XA2-XW-f8A"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-a9-4rt">
-                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="XHr-a9-4rt" secondAttribute="trailing" id="3hc-hU-3Ub"/>
-                            <constraint firstItem="sNw-J9-i8Z" firstAttribute="top" secondItem="XHr-a9-4rt" secondAttribute="bottom" id="84E-lN-c6p"/>
-                            <constraint firstItem="yia-td-sXw" firstAttribute="leading" secondItem="XPP-w4-COZ" secondAttribute="leading" id="BzV-S9-Ueq"/>
-                            <constraint firstItem="XHr-a9-4rt" firstAttribute="leading" secondItem="XPP-w4-COZ" secondAttribute="leading" id="FA7-8W-RVX"/>
-                            <constraint firstItem="XHr-a9-4rt" firstAttribute="top" secondItem="yia-td-sXw" secondAttribute="bottom" id="MTQ-ze-FFi"/>
-                            <constraint firstItem="yia-td-sXw" firstAttribute="top" secondItem="XPP-w4-COZ" secondAttribute="top" constant="10" id="On7-2E-sfz"/>
-                            <constraint firstAttribute="trailing" secondItem="yia-td-sXw" secondAttribute="trailing" id="gcz-P0-TWM"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="XHr-a9-4rt" id="pDq-aF-dZP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EVS-Zh-sy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="986.39999999999998" y="42.728635682158924"/>
+            <point key="canvasLocation" x="28.985507246376812" y="42.391304347826093"/>
         </scene>
     </scenes>
 </document>
