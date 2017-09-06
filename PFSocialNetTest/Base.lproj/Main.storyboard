@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ubR-ka-Kg0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="LinkedIb">
+                                <state key="normal" title="LinkedIn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.43810332239999999" green="1" blue="0.98849768760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -94,6 +94,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih3-zy-MxB"/>
+                                    <segue destination="bId-qy-nyn" kind="presentation" id="2d9-3W-pkK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,6 +125,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="42.391304347826093"/>
+        </scene>
+        <!--Linkedin View Controller-->
+        <scene sceneID="l7M-XL-lwH">
+            <objects>
+                <viewController id="bId-qy-nyn" customClass="LinkedinViewController" customModule="PFSocialNetTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7I-Bh-y4Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqF-5I-US5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QvB-jy-lYq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-xD-r10">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE3-rr-BzO">
+                                        <rect key="frame" x="8" y="10" width="90" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="9hf-jD-jLm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="1" green="0.9999879599" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="bId-qy-nyn" eventType="touchUpInside" id="nbq-qR-muO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1ez-LT-obC"/>
+                                    <constraint firstItem="PE3-rr-BzO" firstAttribute="leading" secondItem="8Fo-xD-r10" secondAttribute="leading" constant="8" id="71h-jw-PVr"/>
+                                    <constraint firstItem="PE3-rr-BzO" firstAttribute="top" secondItem="8Fo-xD-r10" secondAttribute="top" constant="10" id="IEH-ah-iaL"/>
+                                    <constraint firstAttribute="bottom" secondItem="PE3-rr-BzO" secondAttribute="bottom" constant="10" id="jzu-fE-f9G"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-pF-fgb">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wMv-pF-fgb" firstAttribute="top" secondItem="8Fo-xD-r10" secondAttribute="bottom" id="7Mc-Xn-9bo"/>
+                            <constraint firstItem="8Fo-xD-r10" firstAttribute="leading" secondItem="QvB-jy-lYq" secondAttribute="leading" id="CB3-Ha-Rzs"/>
+                            <constraint firstItem="zqF-5I-US5" firstAttribute="top" secondItem="wMv-pF-fgb" secondAttribute="bottom" id="PCp-WK-z6X"/>
+                            <constraint firstItem="8Fo-xD-r10" firstAttribute="top" secondItem="QvB-jy-lYq" secondAttribute="top" id="hao-Fj-EpX"/>
+                            <constraint firstItem="wMv-pF-fgb" firstAttribute="leading" secondItem="QvB-jy-lYq" secondAttribute="leading" id="iAL-5D-sPK"/>
+                            <constraint firstAttribute="trailing" secondItem="wMv-pF-fgb" secondAttribute="trailing" id="k0X-Lg-yQp"/>
+                            <constraint firstAttribute="trailing" secondItem="8Fo-xD-r10" secondAttribute="trailing" id="vhv-nP-95y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="wMv-pF-fgb" id="Dzb-0Q-LXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wnj-xZ-BIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="45.42728635682159"/>
         </scene>
     </scenes>
 </document>
