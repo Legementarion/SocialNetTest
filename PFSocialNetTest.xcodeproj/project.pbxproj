@@ -18,7 +18,7 @@
 		842F13461F4C76D900084708 /* PFSocialNetTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F13451F4C76D900084708 /* PFSocialNetTestTests.swift */; };
 		842F13511F4C76DA00084708 /* PFSocialNetTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F13501F4C76DA00084708 /* PFSocialNetTestUITests.swift */; };
 		842F13611F4C832100084708 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842F13601F4C832100084708 /* GoogleService-Info.plist */; };
-		A37407BE1F500D8C00D9E73F /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */; };
+		A37AC9911F60080200E71C4C /* linkedInButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A37AC9901F60080200E71C4C /* linkedInButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,8 @@
 		842F13601F4C832100084708 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84D591FF1F4D77B5004463B2 /* PFSocialNetTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFSocialNetTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		9FE39F9E5175B789868E48E6 /* Pods_PFSocialNetTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PFSocialNetTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedinViewController.swift; path = Controllers/LinkedinViewController.swift; sourceTree = "<group>"; };
+		A37AC98D1F60047300E71C4C /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "../linkedin-sdk.framework"; sourceTree = "<group>"; };
+		A37AC9901F60080200E71C4C /* linkedInButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = linkedInButton.png; path = Resources/linkedInButton.png; sourceTree = "<group>"; };
 		BCBDF0DF6BB09F8B23917F07 /* Pods-PFSocialNetTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFSocialNetTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PFSocialNetTestUITests/Pods-PFSocialNetTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CF4F27D87A9C041623C457CF /* Pods_PFSocialNetTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PFSocialNetTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42E42F5D194B89E10C223C3 /* Pods-PFSocialNetTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFSocialNetTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PFSocialNetTestUITests/Pods-PFSocialNetTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		7F0203B3AD3F6D918B5DA605 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A37AC98D1F60047300E71C4C /* linkedin-sdk.framework */,
 				CF4F27D87A9C041623C457CF /* Pods_PFSocialNetTest.framework */,
 				7CEC2D4DF8B9BFCB1A8DFBD2 /* Pods_PFSocialNetTestTests.framework */,
 				9FE39F9E5175B789868E48E6 /* Pods_PFSocialNetTestUITests.framework */,
@@ -142,6 +144,7 @@
 		842F132F1F4C76D900084708 /* PFSocialNetTest */ = {
 			isa = PBXGroup;
 			children = (
+				A37AC98F1F6007CA00E71C4C /* Resources */,
 				842F135F1F4C7A5900084708 /* Code */,
 				842F135E1F4C7A4900084708 /* Controllers */,
 				842F13301F4C76D900084708 /* AppDelegate.swift */,
@@ -177,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				842F13321F4C76D900084708 /* ViewController.swift */,
-				A37407BD1F500D8C00D9E73F /* LinkedinViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +189,14 @@
 			children = (
 			);
 			name = Code;
+			sourceTree = "<group>";
+		};
+		A37AC98F1F6007CA00E71C4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A37AC9901F60080200E71C4C /* linkedInButton.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +321,7 @@
 			files = (
 				842F133B1F4C76D900084708 /* LaunchScreen.storyboard in Resources */,
 				842F13611F4C832100084708 /* GoogleService-Info.plist in Resources */,
+				A37AC9911F60080200E71C4C /* linkedInButton.png in Resources */,
 				842F13381F4C76D900084708 /* Assets.xcassets in Resources */,
 				842F13361F4C76D900084708 /* Main.storyboard in Resources */,
 			);
@@ -355,6 +366,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PFSocialNetTest/Pods-PFSocialNetTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -363,9 +375,13 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IOSLinkedInAPIFix/IOSLinkedInAPIFix.framework",
+				"${BUILT_PRODUCTS_DIR}/LinkedinSwift/LinkedinSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -374,6 +390,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IOSLinkedInAPIFix.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinkedinSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -506,7 +525,6 @@
 			files = (
 				842F13331F4C76D900084708 /* ViewController.swift in Sources */,
 				842F13311F4C76D900084708 /* AppDelegate.swift in Sources */,
-				A37407BE1F500D8C00D9E73F /* LinkedinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

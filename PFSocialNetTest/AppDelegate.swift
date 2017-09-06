@@ -11,6 +11,7 @@ import GoogleSignIn
 import FacebookCore
 import FacebookLogin
 import FBSDKCoreKit
+import LinkedinSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -39,32 +40,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         let sourceApplication =  options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
         let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
-
-        let googleHandler = GIDSignIn.sharedInstance().handle(
-                url,
-                sourceApplication: sourceApplication,
-                annotation: annotation )
-
-        let facebookHandler = FBSDKApplicationDelegate.sharedInstance().application (
-                app,
-                open: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation )
-
+        let googleHandler = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation )
+        let facebookHandler = FBSDKApplicationDelegate.sharedInstance().application (app, open: url, sourceApplication: sourceApplication, annotation: annotation)
         return googleHandler || facebookHandler
     }
 
 
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
+//            let userId = user.userID                  // For client-side use only!
+//            let idToken = user.authentication.idToken // Safe to send to the server
+//            let fullName = user.profile.name
+//            let givenName = user.profile.givenName
+//            let familyName = user.profile.familyName
+//            let email = user.profile.email
             // ...
         } else {
             print("\(error.localizedDescription)")
@@ -93,6 +83,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        // Linkedin sdk handle redirect
+        if LinkedinSwiftHelper.shouldHandle(url) {
+            return LinkedinSwiftHelper.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        }
+        
+        return false
+    }
 
 }
 

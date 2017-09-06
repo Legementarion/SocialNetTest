@@ -94,7 +94,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih3-zy-MxB"/>
-                                    <segue destination="bId-qy-nyn" kind="presentation" id="2d9-3W-pkK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-xD-r10">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE3-rr-BzO">
                                         <rect key="frame" x="8" y="10" width="90" height="30"/>
@@ -164,16 +163,16 @@
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-pF-fgb">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wMv-pF-fgb" firstAttribute="top" secondItem="8Fo-xD-r10" secondAttribute="bottom" id="7Mc-Xn-9bo"/>
                             <constraint firstItem="8Fo-xD-r10" firstAttribute="leading" secondItem="QvB-jy-lYq" secondAttribute="leading" id="CB3-Ha-Rzs"/>
                             <constraint firstItem="zqF-5I-US5" firstAttribute="top" secondItem="wMv-pF-fgb" secondAttribute="bottom" id="PCp-WK-z6X"/>
-                            <constraint firstItem="8Fo-xD-r10" firstAttribute="top" secondItem="QvB-jy-lYq" secondAttribute="top" id="hao-Fj-EpX"/>
+                            <constraint firstItem="8Fo-xD-r10" firstAttribute="top" secondItem="QvB-jy-lYq" secondAttribute="top" constant="20" id="hao-Fj-EpX"/>
                             <constraint firstItem="wMv-pF-fgb" firstAttribute="leading" secondItem="QvB-jy-lYq" secondAttribute="leading" id="iAL-5D-sPK"/>
                             <constraint firstAttribute="trailing" secondItem="wMv-pF-fgb" secondAttribute="trailing" id="k0X-Lg-yQp"/>
                             <constraint firstAttribute="trailing" secondItem="8Fo-xD-r10" secondAttribute="trailing" id="vhv-nP-95y"/>
